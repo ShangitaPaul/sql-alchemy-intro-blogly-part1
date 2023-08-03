@@ -42,8 +42,8 @@ def root():
     return redirect("/users")
 
 
-##############################################################################
-# User route
+
+# Define User route
 
 @app.route('/users')
 # users_index: Retrieves all users from the database and renders the 'users/index.html' template to display information about all users in alphabetical order by last name and first name.
