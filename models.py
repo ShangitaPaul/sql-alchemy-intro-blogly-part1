@@ -34,7 +34,7 @@ class User(db.Model):
     __tablename__ = 'users'
     
     # We define three columns: id, first_name, and last_name, with their respective data types. id is the primary key for the table, and both first_name and last_name cannot be null because rhey are required fields).
-    id = db.Column(db.Integer, primary_key=True, #autoincrement=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     # Define the image_url column with a default value of DEFAULT_IMAGE_URL. This column will store the URL of the user's profile image, and the default URL will be used if the user does not provide a custom image URL.
@@ -44,20 +44,7 @@ class User(db.Model):
     image_url = db.Column(db.Text, nullable=False, default=DEFAULT_IMAGE_URL)
     # Reason: using a constant variable like DEFAULT_IMAGE_URL ("https://www.freeiconspng.com/uploads/icon-user-blue-symbol-people-person-generic--public-domain--21.png") is more flexible and maintainable than directly setting the default value to a specific string like 'default_profile_image.jpg'. Using a constant variable allows easy changes to the default image URL in the future, should the need arise.
     
-    # Define the User Model:  
-        # We define the User model class, which represents the data structure of a user in the database. The model inherits from db.Model, which indicates that it is a SQLAlchemy model.  
-    class User(db.Model):
-        """Site user."""\
-    
-    # Use __tablename__ = "users" to specify the name of the database table where the user data will be stored. In this case, the table name will be "users".
-    __tablename__ = "users"
-    
-    # Define three columns: id, first_name, and last_name, with their respective data types. id is the primary key for the table, and both first_name and last_name cannot be null (i.e., they are required fields).
-    id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.Text, nullable=False)
-    last_name = db.Column(db.Text, nullable=False)
-    # Define the image_url column with a default value of DEFAULT_IMAGE_URL. This column will store the URL of the user's profile image, and the default URL will be used if the user does not provide a custom image URL.
-    image_url = db.Column(db.Text, nullable=False, default=DEFAULT_IMAGE_URL)
+
     
     # Define a @property method called full_name. This method returns the user's full name by combining their first_name and last_name.
     @property

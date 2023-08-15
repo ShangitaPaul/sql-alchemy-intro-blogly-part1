@@ -1,11 +1,11 @@
-<!--ase template provides a consistent layout and styling for all pages in the "Blogly" application. The content specific to each page will be inserted into the {% block content %}{% endblock %} section when the template is extended. This approach allows for code reusability and consistent design across different pages of the application.-->
+<!--ase template provides a consistent layout and styling for all pages in the "Blogly" application. The content specific to each page will be inserted into the {% block co %}{% endblock %} section when the template is extended. This approach allows for code reusability and consistent design across different pages of the application.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>
-    <!-- The content inside {% block title %}{% endblock %} will be replaced by the title specific to each template that extends this base template using the Jinja2 block tag.-->
-    Blogly &ndash; {% block title %}{% endblock %}
+    <!-- The content inside {% block tii %}{% endblock %} will be replaced by the title specific to each template that extends this base template using the Jinja2 block tag.-->
+    Blogly {% block title %}{% endblock %}
   </title>
   <link rel="stylesheet"
         href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
@@ -29,7 +29,7 @@
 </nav>
 <div class="container mt-5">
   <!--The class="container mt-5" applies Bootstrap styling, making the content centered on the page with a top margin of 5 units (mt-5).
-The {% block content %}{% endblock %} is a Jinja2 block tag that serves as a placeholder for the content specific to each template that extends this base template.-->
+The {% block con %}{% endblock %} is a Jinja2 block tag that serves as a placeholder for the content specific to each template that extends this base template.-->
   {% block content %}
   <!-- put the content here -->
   {% endblock %}
