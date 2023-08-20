@@ -19,23 +19,46 @@ requirements.txt: This file lists all the Python packages and their versions req
 Overall, this app follows a standard Flask structure with routes defined for viewing, creating, updating, and deleting user profiles. The base template provides a consistent UI design, and the SQLAlchemy model is used to interact with the database.Any visitor to the site should be able to see all users, add a user, or edit any user.
 
 # Routes
-The purpose of the project is to build a blogging application called "Blogly" using Flask and SQLAlchemy. The application allows users to interact with user profiles without the need for authentication. The main routes include:
+The purpose of the project is to build a blogging application called "Blogly" using Flask and SQLAlchemy. The application allows users to interact with user profiles without the need for authentication. The main routes defined in the Flask app corrospond to different URL paths that users can access to perform various actions (described above). The HTML files (edit.html, index.html, new.html, and show.html) are templates that are used to render the content of those routes. Each route typically corresponds to a specific template file.
 
+**Breakdown how these routes relate to the HTML templates:**
 1. GET /: Redirect to list of users. (We’ll fix this in a later step).
+   
+2. GET /users:
+   
+- This route displays a list of all users.
+- Corresponding HTML Template: index.html
+  
+3. GET /users/new: 
 
-2. GET /users: Displays a list of all users.
+- This route shows a form for adding a new user.
+- Corresponding HTML Template: new.html
+  
+4. POST /users/new
+   
+- This route processes the submitted form for adding a new user and redirects back to the list of users or the user's detail page.
+- No corresponding HTML Template. It involves data processing and redirection.
+  
+5. GET /users/[user-id]
 
-3. GET /users/new: Shows a form to add a new user.
+- This route displays detailed information about a specific user.
+- Corresponding HTML Template: show.html
+  
+6. GET /users/[user-id]/edit
+ 
+- This route shows an edit form for a specific user.
+- Corresponding HTML Template: edit.html
 
-4. POST /users/new: Processes the add user form and adds a new user to the database.
+7. POST /users/[user-id]/edit
 
-5. GET /users/[user-id]: Displays detailed information about a specific user.
+- This route processes the submitted form for editing a user's details and redirects back to the user's detail page.
+- No corresponding HTML Template. It involves data processing and redirection.
+  
+8. POST /users/[user-id]/delete
 
-6. GET /users/[user-id]/edit: Shows an edit form for a specific user.
+- This route deletes a specific user from the database and redirects to the list of users.
+- No corresponding HTML Template. It involves data processing and redirection.
 
-7. POST /users/[user-id]/edit: Processes the edit user form and updates the user's details.
-
-8. POST /users/[user-id]/delete: Deletes a specific user.
 
 **To write tests for these routes, follow these steps:**
 
