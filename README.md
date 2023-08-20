@@ -72,7 +72,7 @@ Routes that involve form submissions and data processing (POST methods) don't ha
 
 Create a Test Directory: Create a directory named tests in your project directory to store your test files.
 
-Import Modules: In the test file, import necessary modules and classes including Flask, SQLAlchemy, and testing libraries.
+Import Modules: In the test file entitled test-routes.py, import necessary modules and classes including Flask, SQLAlchemy, and testing libraries.
 
 Create a Test Class: Define a test class that inherits from a testing base class (e.g., TestCase from flask_testing).
 
@@ -82,7 +82,7 @@ Set Up and Tear Down: Implement the setUp and tearDown methods to set up and cle
 
 Write Test Methods: Create test methods to simulate requests and verify responses for each route. Use self.client for request simulation and assertions to validate responses.
 
-Run Tests: Open your terminal, navigate to the project directory, and run tests using the testing framework's command-line tools.
+Run Tests: Open your terminal, navigate to the project directory, and run tests using testing frameworks commands.
 
 Interpret Test Results: Review the test results to see which tests passed and which ones failed. Fix any issues that arise.
 
@@ -90,7 +90,7 @@ Repeat for Other Routes: Follow a similar process to create tests for other rout
 
 **To run the tests, navigate to the project directory in terminal and type following command for Fedora 37 Red Hat Linux:**
 
-python -m unittest tests.test_routes
+python -m unittest tests.test-routes
 
 
 # To generate a requirements.txt file for your Flask project using SQLAlchemy:
