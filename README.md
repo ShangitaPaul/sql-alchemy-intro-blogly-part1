@@ -68,9 +68,7 @@ The purpose of the project is to build a blogging application called "Blogly" us
   
 Routes that involve form submissions and data processing (POST methods) don't have a corresponding HTML template because they usually redirect back to another route, which then displays a template based on the updated data.
 
-
-
-**To write tests for these routes, follow these steps:**
+# Write Tests for Routes
 
 Create a Test Directory: Create a directory named tests in your project directory to store your test files.
 
@@ -89,6 +87,10 @@ Run Tests: Open your terminal, navigate to the project directory, and run tests 
 Interpret Test Results: Review the test results to see which tests passed and which ones failed. Fix any issues that arise.
 
 Repeat for Other Routes: Follow a similar process to create tests for other routes and functionalities in your application.
+
+***To run the tests, navigate to the project directory in terminal and type following command for Fedora 37 Red Hat Linux:
+
+python -m unittest tests.test_routes
 
 
 # To generate a requirements.txt file for your Flask project using SQLAlchemy:
