@@ -59,6 +59,16 @@ The purpose of the project is to build a blogging application called "Blogly" us
 - This route deletes a specific user from the database and redirects to the list of users.
 - No corresponding HTML Template. It involves data processing and redirection.
 
+**To summarize:**
+
+- The index.html template is used to display the list of users (GET /users).
+- The new.html template is used for the form to add a new user (GET /users/new).
+- The show.html template is used to display detailed information about a user (GET /users/[user-id]).
+- The edit.html template is used for the form to edit a user's details (GET /users/[user-id]/edit).
+  
+Routes that involve form submissions and data processing (POST methods) don't have a corresponding HTML template because they usually redirect back to another route, which then displays a template based on the updated data.
+
+
 
 **To write tests for these routes, follow these steps:**
 
