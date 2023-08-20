@@ -88,7 +88,7 @@ Interpret Test Results: Review the test results to see which tests passed and wh
 
 Repeat for Other Routes: Follow a similar process to create tests for other routes and functionalities in your application.
 
-***To run the tests, navigate to the project directory in terminal and type following command for Fedora 37 Red Hat Linux:
+**To run the tests, navigate to the project directory in terminal and type following command for Fedora 37 Red Hat Linux:**
 
 python -m unittest tests.test_routes
 
