@@ -21,19 +21,21 @@ Overall, this app follows a standard Flask structure with routes defined for vie
 # Routes
 The purpose of the project is to build a blogging application called "Blogly" using Flask and SQLAlchemy. The application allows users to interact with user profiles without the need for authentication. The main routes include:
 
-1. GET /users: Displays a list of all users.
+1. GET /: Redirect to list of users. (We’ll fix this in a later step).
 
-2. GET /users/new: Shows a form to add a new user.
+2. GET /users: Displays a list of all users.
 
-3. POST /users/new: Processes the add user form and adds a new user to the database.
+3. GET /users/new: Shows a form to add a new user.
 
-4. GET /users/[user-id]: Displays detailed information about a specific user.
+4. POST /users/new: Processes the add user form and adds a new user to the database.
 
-5. GET /users/[user-id]/edit: Shows an edit form for a specific user.
+5. GET /users/[user-id]: Displays detailed information about a specific user.
 
-6. POST /users/[user-id]/edit: Processes the edit user form and updates the user's details.
+6. GET /users/[user-id]/edit: Shows an edit form for a specific user.
 
-7. POST /users/[user-id]/delete: Deletes a specific user.
+7. POST /users/[user-id]/edit: Processes the edit user form and updates the user's details.
+
+8. POST /users/[user-id]/delete: Deletes a specific user.
 
 **To write tests for these routes, follow these steps:**
 
