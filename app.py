@@ -62,20 +62,18 @@ def users_new_form():
     return render_template('users/new.html')
 
 
-@app.route("/users/new", methods=["POST"])
-# users_new: Handles the form submission for creating a new user. It retrieves form data from the request, creates a new User object, adds it to the database session, and commits the changes to the database.
+@app.route('/users/new', methods=['POST'])
 def users_new():
-    """Handle form submission for creating a new user"""
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    image_url = request.form.get('image_url', None)  # Use get() with a default value
 
-    new_user = User(
-        first_name=request.form['first_name'],
-        last_name=request.form['last_name'],
-        image_url=request.form['image_url'] or None)
-
+    new_user = User(first_name=first_name, last_name=last_name, image_url=image_url)
     db.session.add(new_user)
     db.session.commit()
 
-    return redirect("/users")
+    return redirect('/users')
+
 
 
 @app.route('/users/<int:user_id>')
